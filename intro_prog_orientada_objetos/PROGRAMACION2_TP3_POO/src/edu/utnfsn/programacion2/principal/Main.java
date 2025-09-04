@@ -1,6 +1,6 @@
 package edu.utnfsn.programacion2.principal;
 
-import edu.utnfsn.programacion2.libro.Libro;
+import edu.utnfsn.programacion2.gallina.Gallina;
 
 /**
  *
@@ -29,19 +29,31 @@ public class Main {
 //        mascota.edad = 10;
 //        mascota.mostrarInfo();
 //        mascota.cumplirAnios();
-
         //3. Encapsulamiento con la Clase Libro
-        Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 1967);
+//        Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 1967);
+//        
+//        libro1.mostrarInfo();
+//        
+//        System.out.println("\nIntento modificar año con valor inválido");
+//        libro1.setAñoPublicacion(0);
+//        
+//        System.out.println("\nIntento modificar año con un valor válido");
+//        libro1.setAñoPublicacion(2024);
+//        
+//        libro1.mostrarInfo();
+        // Utilizamos método constructor
         
-        libro1.mostrarInfo();
         
-        System.out.println("\nIntento modificar año con valor inválido");
-        libro1.setAñoPublicacion(0);
-        
-        System.out.println("\nIntento modificar año con un valor válido");
-        libro1.setAñoPublicacion(2024);
-        
-        libro1.mostrarInfo();
-    }
+        // Recibe por parámetro ID y edad
+        Gallina g1 = new Gallina("G001", 1);
+        Gallina g2 = new Gallina("G002", 2);
 
+        g1.ponerHuevo();
+        g1.envejecer();
+        g1.mostrarEstado();
+
+        g2.ponerHuevo();
+        g2.ponerHuevo();
+        g2.mostrarEstado();
+    }
 }
