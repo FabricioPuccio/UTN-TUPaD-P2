@@ -1,7 +1,6 @@
 package edu.utnfsn.programacion2.principal;
 
-import edu.utnfsn.programacion2.estudiante.Estudiante;
-import edu.utnfsn.programacion2.mascota.Mascota;
+import edu.utnfsn.programacion2.libro.Libro;
 
 /**
  *
@@ -10,7 +9,7 @@ import edu.utnfsn.programacion2.mascota.Mascota;
 public class Main {
 
     public static void main(String[] args) {
-        
+
         // Instancias y pruebas de todos los ejercicios y clases
         // 1. Registro de Estudiantes
 //        Estudiante estudiante = new Estudiante();
@@ -23,14 +22,26 @@ public class Main {
 //        estudiante.mostrarInfo();
 //        estudiante.subirCalificacion(1.5);
 //        estudiante.bajarCalificacion(0.5);
-        
         //2. Registro de Mascotas
-        Mascota mascota = new Mascota();
-        mascota.nombre = "Lyon";
-        mascota.especie = "Perro";
-        mascota.edad = 10;
-        mascota.mostrarInfo();
-        mascota.cumplirAnios();
+//        Mascota mascota = new Mascota();
+//        mascota.nombre = "Lyon";
+//        mascota.especie = "Perro";
+//        mascota.edad = 10;
+//        mascota.mostrarInfo();
+//        mascota.cumplirAnios();
+
+        //3. Encapsulamiento con la Clase Libro
+        Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 1967);
+        
+        libro1.mostrarInfo();
+        
+        System.out.println("\nIntento modificar año con valor inválido");
+        libro1.setAñoPublicacion(0);
+        
+        System.out.println("\nIntento modificar año con un valor válido");
+        libro1.setAñoPublicacion(2024);
+        
+        libro1.mostrarInfo();
     }
 
 }
