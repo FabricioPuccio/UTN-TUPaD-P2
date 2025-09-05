@@ -1,6 +1,6 @@
 package edu.utnfsn.programacion2.principal;
 
-import edu.utnfsn.programacion2.gallina.Gallina;
+import edu.utnfsn.programacion2.naveespacial.NaveEspacial;
 
 /**
  *
@@ -42,18 +42,26 @@ public class Main {
 //        
 //        libro1.mostrarInfo();
         // Utilizamos método constructor
-        
-        
         // Recibe por parámetro ID y edad
-        Gallina g1 = new Gallina("G001", 1);
-        Gallina g2 = new Gallina("G002", 2);
+//        Gallina g1 = new Gallina("G001", 1);
+//        Gallina g2 = new Gallina("G002", 2);
+//
+//        g1.ponerHuevo();
+//        g1.envejecer();
+//        g1.mostrarEstado();
+//
+//        g2.ponerHuevo();
+//        g2.ponerHuevo();
+//        g2.mostrarEstado();
+        // Se crea una nave con 50 unidades de combustible
+        NaveEspacial nave = new NaveEspacial("Apollo", 50);
 
-        g1.ponerHuevo();
-        g1.envejecer();
-        g1.mostrarEstado();
+        nave.mostrarEstado();
+        nave.despegar();
+        nave.avanzar(100); // Requiere 50 unidades, pero solo tiene 40
+        nave.recargarCombustible(30);
+        nave.avanzar(100);
+        nave.mostrarEstado();
 
-        g2.ponerHuevo();
-        g2.ponerHuevo();
-        g2.mostrarEstado();
     }
 }
